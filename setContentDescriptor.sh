@@ -5,7 +5,7 @@ git diff $2 > changelog_full.txt
 
 SERVER_DOWNLOAD_LINK=$(curl -s -H "$ACCEPT_TYPE" ${SERVER_API_URI}/${ARTIFACT_BUILD_NUM}/artifacts?${TOKEN_ATTR} | jq '.[].url' -r | grep demistoserver | grep /0/)
 
-deleted=$(cat changelog.txt | grep -p "^D")
+deleted=$(cat changelog.txt | grep "^D")
 
 echo " #### deleted #####"
 echo "$deleted"
