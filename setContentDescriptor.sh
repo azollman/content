@@ -7,7 +7,7 @@ echo "###### changelog.txt #########"
 cat  ./changelog.txt
 echo "###############"
 echo "####### changelog_full ########"
-cat ./changelog_full
+cat ./changelog_full.txt
 echo "###############"
 
 
