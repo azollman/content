@@ -1,0 +1,91 @@
+id: Test-Milkshake
+version: 3
+name: Test-Milkshake
+starttaskid: "0"
+tasks:
+  "0":
+    id: "0"
+    taskid: 972a2fbf-bb28-4974-8acf-d00dabfa59c8
+    type: start
+    task:
+      id: 972a2fbf-bb28-4974-8acf-d00dabfa59c8
+      version: -1
+      name: ""
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "1"
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+  "1":
+    id: "1"
+    taskid: c502ab44-b9e6-4d6c-820b-b1a6b0e5a69e
+    type: regular
+    task:
+      id: c502ab44-b9e6-4d6c-820b-b1a6b0e5a69e
+      version: -1
+      name: milkshake-search
+      script: Milkshake|||milkshake-search
+      type: regular
+      iscommand: true
+      brand: Milkshake
+    nexttasks:
+      '#none#':
+      - "2"
+    scriptarguments:
+      type: Vanilla
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 230
+        }
+      }
+  "2":
+    id: "2"
+    taskid: 7840b788-863e-475c-84a4-30cac52fb95e
+    type: regular
+    task:
+      id: 7840b788-863e-475c-84a4-30cac52fb95e
+      version: -1
+      name: VerifyContext - milkshake-search
+      description: |-
+        Verifies path in context:
+        - Verifies path existence
+        - If matching object is an array: verify fields exists in each of the objects in the array
+        - If matching object is not an array: verify fields exists in matching object
+        - if 'expectedValue' is given: ensure that the given value is equal to the context path
+      scriptName: VerifyContext
+      type: regular
+      iscommand: false
+      brand: ""
+    scriptarguments:
+      expectedValue: ""
+      fields: Flavor,Price,Stars
+      path: Milkshake
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 410
+        }
+      }
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 455,
+        "width": 380,
+        "x": 450,
+        "y": 50
+      }
+    }
+  }
+inputs: []
