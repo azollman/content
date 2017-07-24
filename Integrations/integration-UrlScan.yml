@@ -271,14 +271,17 @@ script:
             timeout = 30;
         }
 
-        while (tWait < timeout &&
-                res.results[0]._id !== resScan.uuid) {
-                    wait(5);
-                    tWait += 5;
-                    res = sendRequest("GET","/search?q=" + "\"" + scanUrl + "\"");
-                }
+        if (res.results.length >= 1) {
+            while (tWait < timeout &&
+                    res.results[0]._id !== resScan.uuid) {
+                        wait(5);
+                        tWait += 5;
+                        res = sendRequest("GET","/search?q=" + "\"" + scanUrl + "\"");
+                    }
+        }
 
-        if (res.results[0]._id === resScan.uuid) {
+        if (res.results.length >= 1 &&
+            res.results[0]._id === resScan.uuid) {
             var scanResults = res.results[0];
 
             md += "## Urlscan.io Reputation for " + scanUrl + "\n";
@@ -306,7 +309,7 @@ script:
 
         } else {
             ec.DBotScore = {Indicator: args.url, Type: 'url', Vendor: 'Urlscan.io', Score: dbotScore};
-            md += "No scan results yet.";
+            md += "No scan results.";
             resDis.push( {'ContentsFormat': formats.json, 'Type': entryTypes.note, 'Contents': res, 'HumanReadable': md, 'EntryContext': ec} );
             return resDis;
         }
