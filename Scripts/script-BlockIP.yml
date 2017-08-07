@@ -1,8 +1,9 @@
 commonfields:
-  id: bffdcf72-2061-4767-83d5-3ff2a9e8afe7
+  id: BlockIP
   version: 5
 name: BlockIP
 script: |-
+  var test = 'test release notes';
   var blockPanorama = !!executeCommand('IsIntegrationAvailable',{'brandname': 'panorame'})[0].Contents;
   var blockCP = !!executeCommand('IsIntegrationAvailable',{'brandname': 'check point'})[0].Contents;
   switch (args['using-brand'].toLowerCase()) {
@@ -55,3 +56,4 @@ dependson:
   - panorama
   - checkpoint
 timeout: 0s
+releaseNotes: "test for releaseNOtes"

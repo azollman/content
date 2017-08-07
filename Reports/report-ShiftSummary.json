@@ -1,13 +1,12 @@
 {
   "id": "ShiftSummaryReport",
   "name": "Shift summary report",
-  "description": "Shift summary which includes the last 6 hours open and closed incidents.",
-  "fromVersion": "2.5.0",
+  "description": "Shift summary which includes the last 6 hours open and closed incidents. edit descirption",
+  "fromVersion": "3.0.0",
   "tags": [],
   "createdBy": "DBot",
   "type": "pdf",
   "orientation": "landscape",
-  "releaseNotes": "-",
   "recipients": [],
   "system": true,
   "decoder": {

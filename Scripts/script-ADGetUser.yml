@@ -3,6 +3,7 @@ commonfields:
   version: -1
 name: ADGetUser
 script: |-
+  test = 'this is a test arg for releasnotes'
   limit = 20
   if demisto.get(demisto.args(), 'limit'):
       limit = demisto.args()['limit']
@@ -206,4 +207,4 @@ outputs:
   description: The groups the Account is part of
 - contextPath: Account.DisplayName
   description: The Account display name
-releaseNotes: "Added limit param and set default size limit"
+releaseNotes: "test for realeasenotes"

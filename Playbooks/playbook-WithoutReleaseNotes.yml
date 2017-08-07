@@ -1,10 +1,10 @@
-id: Account Enrichment
+id: withoutReleaseNotes-plybook
 version: -1
-name: Account Enrichment
+name: withoutReleaseNotes-plybook
 system: true
 fromversion: 2.5.0
-releaseNotes: "test releaseNOtes"
-description: Enrich the accounts above because test the Account context key with details from relevant integrations such as AD.
+description: Enrich the accounts under the Account context key with details from relevant
+  integrations such as AD.
 starttaskid: "0"
 tasks:
   "0":

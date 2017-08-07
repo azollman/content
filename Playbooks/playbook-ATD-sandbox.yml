@@ -1,6 +1,7 @@
 id: ATD-playbook
 version: -1
 name: ATD-playbook
+description: test description for release notes
 starttaskid: "0"
 tasks:
   "0":

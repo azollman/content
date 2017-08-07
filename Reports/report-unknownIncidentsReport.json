@@ -1,13 +1,13 @@
 {
   "id": "unknownIncidentsReport",
   "name": "Unknown severity incidents",
-  "description": "Report about all unknown severity incidents that may need the analyst attention.",
+  "description": "Report about all unknown severity incidents that may need the analyst attention. test edit for realese notess",
   "fromVersion": "2.5.0",
   "tags": [],
   "createdBy": "DBot",
   "type": "pdf",
   "orientation": "portrait",
-  "releaseNotes": "-",
+  "releaseNotes": "test releasenotes",
   "recipients": [],
   "system": true,
   "decoder": {

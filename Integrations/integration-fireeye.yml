@@ -40,6 +40,7 @@ configuration:
   required: false
 script:
   script: |-
+    var test = 'this is test for releaseNOtes';
     server = params.server.replace(/[\/]+$/, '') + '/wsapis/v' + params.version + '/';
     commandDictionary = {
         login: {
@@ -435,4 +436,4 @@ script:
     arguments: []
     description: commands.server.feConfig.description
 cangetsamples: true
-releaseNotes: "Added outputs"
+releaseNotes: "release notes test"
