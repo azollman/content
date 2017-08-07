@@ -265,7 +265,7 @@ def createFileReleaseNotes(fileName, deleteFilePath):
                 fullFileName = names[2]
                 changeType = 'M'
 
-            with open(contentLibPath + fullFileName, 'r') as f:
+            with open(contentLibPath + fullFileName+'.yml', 'r') as f:
                 data = f.read()
                 if "/" in fullFileName:
                     fileType = fullFileName.split("/")[0]
